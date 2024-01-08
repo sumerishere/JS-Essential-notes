@@ -1,0 +1,203 @@
+                 ---------------- FUNCTIONS IN JS -----------------
+
+
+1. Definition : Block of reusable code.
+2. DRY Principle.
+3. Usage: Organizes code and improve performance by doing specific task.
+4. Naming RUles : Same as variable names: camelCase.
+5. All methods are functions, but not all functions are methods.
+
+Sysntax: 
+
+         function function_name(para if){
+             //statements or code.
+        }
+        function_name(para pass);
+
+
+  ---------------------------------------------------------------------------------
+
+
+                ------------------- OBJECTS in JS ---------------------
+
+1. what is an obj ?
+   - groups of multiple values togather in key-value pairs.
+   - how to define : use {} to enclose properties.
+   - eg : product {name, price}.
+   - DOt notation : use ".operator" to access values.
+   - key benefit : Organizes related data under a single name.
+
+2. Obj syntax.
+
+   - for eg :   
+              let product = {
+                    company : 'Roadster',
+                    item_name : 'T-shirt',
+                    price : 861
+                    displayGreet : function (){
+                                    return 'hello everyone !';
+                                  }
+                             //OR u can write like this directly as well.
+
+                    displayGreet() {
+                                    return 'hello everyone !';
+                                  }
+              };
+
+
+3. Accessing objects.
+   - Dot notation : access properties using ".Operator" like "product.price" .
+   - bracket notation : useful for properties with special characters 
+     product["nick-name"].Variables can be used to access prperties.
+   - typesof returns object. 
+   - Values can be added or removed to an object.
+   - Delete values using delete.
+
+
+4. Inside objects.
+   - Objects can contain "Primitives data type" like numbers and "Strings".
+   - Objects can contain other objts and are called nested obcjs.
+   - Functions can be objcs properties.
+   - Functions inside an objts are called methods.
+   - Null value : Intentionally leaving a property empty.
+
+
+5. Autboxing.
+   - Automatic conversion of primitives to objects. 
+   - Allows properties and methods to be used on primitives.
+   - eg : String have properties and methods like length, toUpperCase,etc.
+   - It allows you to use properties and methods on primitive values without     
+     explicitly creating wrapper objects.
+
+
+6. Object references.
+   - Objects work based on references, not actual data.
+   - Copying an object copies the reference, not actual object.
+   - When comparing with "==", ref compare not values.
+   - Changes to one ref affects all copies.
+ 
+
+7. Object shortcuts.
+   - De-structuring : Extract properties from objects easily.
+
+    eg: 
+                  let product = {
+                         company : 'xyz',
+                         price : 883,
+                         name : 'xxxx'
+                  };
+
+                  // console.log(product['company']);
+
+                  // let company = product.company;         //normally structured.
+
+                      //---- both above and below are same ----
+
+                  // let {company} = product;   // Destructuring.
+
+                  console.log(company);
+ 
+     *Also u can add multiple key inside that one curly bracket.*
+      eg: 
+            let {company, price, name} = product;   //Destructuring.
+
+            console.log(company); //calling seprately.
+            console.log(price);
+            console.log(name);
+
+
+   - We can extract more one property at once.
+   - Shorthand Property : {message : message} simplifies to just message. 
+     - u can deffine same key-value name if value not known.
+
+   - Shorthand Method : Define methods directly inside object without the func keyword.
+
+ ------------------------------------------------------------------------------------
+
+- All methods are functions, but not all functions are methods.
+
+- If a function is a property of an object and is called on that object, it is  
+  referred to as a method.
+
+- If a function is not associated with an object and is called independently, it 
+  is simply referred to as a function.
+
+
+ eg of method : 
+                let product = {
+                          company : 'xyz',
+                          price : 883,
+                          displayPrice : function () {
+                                            let price = `the price ${caln}`;
+                           }
+                }
+               console.log(product.displayPrice());  //calling func inside obj.
+
+
+
+
+   
+
+   // industry level method creating eg of product content equality check .
+
+   function isIdenticalproduct(pro_1, pro_2){
+  
+        if(typeof pro_1 !=='Object' && pro_2 !== 'Object'){
+        console.warn('invalid parameter');
+        return false;
+        }
+ 
+        if(pro_1 == pro_2){
+        return true;
+        }
+  
+        if(pro_1.name === pro_2.name &&  pro_1.price === pro_2.price){
+            return true;
+        }
+        else{
+            return false;
+        }
+   }
+
+    // 1.product_1 object
+    
+     let pro_1 = {
+     price : 883,
+     name : 'xyz',
+     };
+
+     // 2.product_2
+
+     let pro_2 = {
+     name : 'xyz',
+     price : 883,
+     };
+
+     // 3.product_2 same with diff name.(dummy)
+
+     let pro_3 = {
+     name : 'xyz',
+     price : 883,
+    
+     };
+
+    //Base test cases for checking equality of two product objects.
+
+    console.log(isIdenticalproduct(pro, ''));
+    console.log(isIdenticalproduct(pro, pro));
+    console.log(isIdenticalproduct(pro_1, pr_2));
+    console.log(isIdenticalproduct(pro_3, pro_2));
+    console.log(isIdenticalproduct(pro_2, pro_3));
+
+
+
+
+
+
+
+
+
+
+
+
+

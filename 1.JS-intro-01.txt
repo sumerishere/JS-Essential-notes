@@ -1,0 +1,74 @@
+FrontEnd-StaCk:-
+-------------------------------JS INTRODUCTION (Client Side)-------------------------------
+
+--> "JS" typically refers to JavaScript, which is a widely used programming language   
+     primarily used for creating interactive and dynamic content on websites.
+
+--> JavaScript is a versatile language that allows developers to add functionality,  
+    interactivity, and behavior to web pages.
+
+--> It is commonly used for tasks such as validating forms, creating interactive user   
+    interfaces, handling events, and communicating with servers to retrieve or send 
+    data without requiring a page refresh.
+
+--> Frameworks: frameworks are like blueprints or templates that developers use to 
+    build applications more efficiently and consistently by leveraging pre-defined      
+    functionalities and structures.
+
+--> JS-Frameworks: React.js, Node.js, Express.js, Backbone.js, Vue.js, NestJS.
+
+--> Server Side Languages:JAVA, PYTHON, RUST.
+
+
+--> Coffee script/ Transcript are Transpiled to JS unlike complier.
+        _____________________       ____________      ______________    __________
+    eg: |_Trans/Coffe-script_| -->  |_x_=>_x+1__| --> |_transpiler_| -->|_JS_Code_|
+
+  *Transpiled : used to convert one format code to another format -->(human_lang to human_lang).
+
+
+
+--what is programmingn language ?
+ 
+  basically, programming language nothing but the instructions to giving computer so 
+         it will be able to understand the human requirements with the help of computation.
+     _________     __________________     ___________________     __________________
+     |problem| -->| _human-_instruct_| -->|010010101(pc-lang)|--> | problem solve! |
+
+
+--Data types in JS --
+
+1. primitive.
+   - Number.
+   - BigInt(numeric type).
+   - String.
+   - Boolean.
+   - NULL.
+   - Undefined.
+   - Symbol.
+
+2. non-primitive.
+   - Object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

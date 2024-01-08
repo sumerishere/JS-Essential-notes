@@ -1,0 +1,107 @@
+         ------------------ JSON, Local Storage, Date & DOM ---------------------
+
+1. What is jSON ?
+  - Simply JSON is used to exchange the DATA betwn two application.
+  - In web dev JSON is used to exchange data betwn client and server.
+  - It stored data in structured form by key-value pair format. (key must encoded with "")
+  - Common in network calls and data storage.
+  - JSON is data format where as JS object is a data structure.  
+  - JSON method : JSON.stringfy() and JSON.parse() .
+
+      JSON.stringify() ---> convert JSON obj into string format.
+      JSON.parse()  ---> convert string into JSON format. 
+
+   eg : 
+          1. stringify();  method :
+
+                let product_con = {    //product container obj.
+
+                  pro_name : 'shirt',
+                  pro_price : 887,
+                  pro_rating : {            //rating nested obj.
+                            stars : 4.5,
+                            pro_userRev : 743,
+                          },
+                };
+
+                console.log(product_con);
+                let str = JSON.stringify(product_con);
+                console.log(str);
+          
+           2. JSON.parse(); method :                                       
+
+
+--------------------------------------------------------------------------------------
+
+2. Local Storage.
+   - Persistent data storage in the browser.
+   - setItem : stores data as key-value pairs.
+   - getItem : retrives data based on key.
+   - Only strings can be stored.
+   - Other Methods : localStorage.clear(), removeItem().
+   - Do not store sensitive information. Viewable in storage console.
+   
+   *Common methods used for localstorage are : 
+
+                       1. localStorage.setItem(key, value):
+                       2. localStorage.getItem(key):
+                       3. localStorage.removeItem(key):
+                       4. localStorage.clear():
+    
+
+3. Date.
+   - "new Date()" Creates a new Date object with current date and time.
+
+   - key Methods:
+         - getTime() : Mili sec since Epoch.
+         - getFullYear() : 4-digit year.
+         - getDay() : Day of the week.
+         - getMinutes() : Current minute.
+         - getHours() : Current hour.
+         - getMillisecods() : mili sec
+
+   - Crucial for timestamaps, scheduling, etc.
+
+
+4. DOM Properties & Methods.
+   
+  1. DOM Properties :
+
+      - Location.
+      - title.
+      - href.
+      - domain.
+      - innerHTML.
+      - innerText.
+      - .classList.
+
+  2. DOM and Element Methods:
+
+      - getElementById().
+      - querySelector().
+      - classList : add(), remove().
+      - classElement().
+      - appendChild().
+      - removeChild().
+      - replaceChild().
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

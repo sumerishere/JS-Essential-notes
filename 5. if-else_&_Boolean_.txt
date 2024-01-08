@@ -1,0 +1,76 @@
+------if-else & Boolean -----
+
+1. what are booleans.
+   - booleans are data type in JS it can either be "true" or be "false".
+   - like "0" or "1".
+
+   - typeof --> shows the data type 
+
+2. Comparison Operators.
+   - Equality operator -->  '==' (check equality and explicitly type cast).
+                           '===' (check value and type equality ).
+
+   - Inequality operator -->  != (chck val not equal), !== (chek val and type Inequality).
+   - Relational operator -->  >, <, >=, <= .  
+   
+   - the priority of comparision operator is less than arithmetic operators.
+      which mean first consider the arithematic calculations then comparision occurs.      
+  
+3. if-else.
+   -> Done
+
+4. Logical Operator.
+   -> &&, || 
+
+5. JS Variable Scope.
+   - 1. Global Scope : Accesible everywhere.
+   - 2. Local Scope : Limited Access mean within perticular block.
+     - Block scope --> let, const.
+     - function scope --> var --> does't follow scope (access inside as well as outside 
+                                 the block).
+
+
+6. Truthy and falsy Values.
+
+   -> Falsy Values : 0, null, undefined, false, NaN, ""(empty string).
+   -> Truthy Values : All values not listed as falsy.
+   -> Used in conditional statement like if.
+   -> Non-boolean values are auto-converted in logical operations.
+   -> Be explicit in comparisons to avoid unexpected behaviour. 
+
+
+7. If alternates.
+
+   -> 1. Ternary Operator : Condition ? trueValue : falseValue. (in one line ).
+
+   -> 2. Guard Operator : value(if true prinit) || defaultValue (if not then print defaultValue).
+        - Use when a fallback value is needed.
+
+   -> 3. Default Operator : value(if null or undefined) ?? fallbackValue (print this ).
+        - Use when u want to consider only null and undefined as falsy. 
+
+   -> 4. Simplifies condional logic.
+
+   -> 5. Use wisely to maintain readability.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

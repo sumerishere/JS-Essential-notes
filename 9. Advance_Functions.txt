@@ -1,0 +1,254 @@
+                 // ---------------- Advance Functions in JS ----------------- //
+
+
+
+1. Anonymous Functions As Values.
+   - An anonymous function is a function that does not have a name. 
+
+   - Anonymous functions are often used in situations where a function is only 
+     needed for a short period or is used as an argument to another function.
+
+   - There are two ways to create anonymous functions :
+
+        1. Function Expression.
+            eg: 
+                    const myFunction = function() {
+                          console.log('This is an anonymous function.');
+                    };
+                    myFunction();  //invoked using variable name with bracket "()".
+
+        2. Arrow Function.
+           eg: 
+              const myFunction = () => {
+                  console.log('This is an anonymous function using an arrow function.');
+              };
+              myFunction();   //invoked using variable name with bracket "()".
+
+------------------------------------------------------------------------------------------
+
+2. Arrow Functions.
+  - Arrow functions don't have their own bindings to this, arguments, 
+     or super, and should not be used as methods.
+
+  -Arrow functions cannot be used as constructors. Calling them with 
+    new throws a TypeError. They also don't have access to the new.target keyword.
+
+  - Arrow functions cannot use yield within their body and cannot be 
+     created as generator functions.
+
+  - For Single Line : Curly bracket and return optional.
+  - Often used when passing functions as arguments.
+
+
+  Syntax of Arrow function : 
+ 
+                           () => expression
+                           param => expression
+
+                           (param) => expression
+                           (param1, paramN) => expression
+                               
+                           () => {
+                                 statements
+                            }
+
+                            param => {
+                                 statements
+                            }
+
+                           (param1, paramN) => {
+                                   statements
+                            }
+
+    
+    eg : temp = (a,b) => a*b;
+         console.log(temp(3,4));
+
+
+  - Arrow functions can be async by prefixing the expression with the async keyword.
+     eg:
+        async param => expression 
+        async ( param1, param2, ...paramN )) => {
+                 //statements
+        }
+
+
+   - We can write Arrow function without using variable known as 
+    - the trailing parentheses () immediately invoke the function.
+
+      IIFE (immediately invoked function expression.)
+      eg : 
+          (() => {
+                 console.log('This is an immediately invoked arrow function.');
+           }) ();
+                            
+                                      OR
+           ( (a=9, b = 3) => console.log(a+b) )(); //for single line expression.
+
+-----------------------------------------------------------------------------------------
+      
+
+3. Set Timeout & setINterval.
+  - functions for executing code asynchronously after a delay.
+
+  - seTimeout  runs once; setInterval runs repeatedly.
+
+  - The global setTimeout() method sets a timer which executes a function 
+      or specified piece of code once the timer expires.
+
+  - setTimeout :
+                 - Syntax:
+                         setTimeout(function (or anonym func), time, cnt_delay_time).
+                eg:
+                    let alarm = function(delay){
+
+                      console.log(`alarm ringing!!! after ${delay / 1000} second delay.`);
+                    }
+                    setTimeout(alarm, 3000, 3000);
+    
+                 - Cancel: 
+                         clearTimeout(timeID).
+
+  - setInterval : 
+                 - Syntax: setInterrval(function, time).
+                 - Cancel: clearInterval(intervalID).
+------------------------------------------------------------------------------------------
+
+4. Event Listner
+   - what is EL : Occurrences like "click", mouse movement, keybard input.
+   - OR system-generated events like the completion of an asynchronous operation.
+   - Using querySelector to attach listeners. 
+   - Multiple Listeners : You can add more than one.
+   - removeEventListner('event', functionVariable);
+   - You can also use named functions as event handlers for better 
+      readability and reusability
+
+  syntax: 
+          addEventListener(type, listener)
+          addEventListener(type, listener, options)
+          addEventListener(type, listener, useCapture)
+
+
+ - Few common types of Event-Listener :
+
+     1. Mouse Events:(click, dblclick, mousedown, mouseup, mousemove, mousehover, mouseout)
+
+     2. Keyboard Events: ( keydown, keyup, keypress ).
+
+     3. Form Events: ( submit, reset, change, input ).
+
+     4. Focus Events: ( focus, blur ).
+
+     5. Window Events: ( resize, load, unload ).
+
+     6. Event Delegation:          
+        - nstead of attaching listeners to individual elements, you can 
+          use event delegation to handle events on a common ancestor and 
+           check the target element dynamically.
+ 
+------------------------------------------------------------------------------------------
+
+5. For Each Loop.
+   - A method for array iteration, often prefered for readability.
+   - Parameters : One for item, optional second for index.
+   - Using "return"(skip val) is similar to "continue" in traditional loops.
+   - Not straightforward to break out of a forEach loop.
+   - When you need to perform an action each array elm and don't need to break early.
+
+  eg : 
+         arr = [1,2,3,4,5,6];
+
+         arr.forEach( (num) => {
+            if(num === 5){
+               return ;   //used to skip the value like continue.
+            }
+            console.log(`visited: ${num}`);
+         });
+	
+------------------------------------------------------------------------------------------
+
+6. Array Methods.
+
+   1]. Map method:
+      - Creates a new array by applying a function to each element in the original array.
+      - or transforming array elm into another form known as mapping. 
+    eg:
+       const numbers = [1, 2, 3, 4];
+       const squared = numbers.map(num => num ** 2);  // squared: [1, 4, 9, 16]
+
+
+   2]. Reduce Method:
+      - Reduces an array to a single value by applying an accumulator function.
+     eg:
+       const numbers = [1, 2, 3, 4];
+       const sum = numbers.reduce((accumulator, i) => accumulator + i, 0); // sum: 10
+   
+
+   3]. Filter Method:
+      - Creates a new array with elements that satisfy a condition specified in a function.
+   eg :
+        const numbers = [1, 2, 3, 4];
+        const evenNumbers = numbers.filter(num => num % 2 === 0); // evenNumbers: [2, 4]
+
+
+   4]. Some Method (boolean):
+      - Checks if at least one element in the array satisfies a given condition.
+   eg :
+       const numbers = [1, 2, 3, 4];
+       const hasEven = numbers.some(num => num % 2 === 0);  // hasEven: true
+
+
+   5]. every Method (boolean):
+      - Checks if all elements in the array satisfy a given condition.
+    eg : 
+        const numbers = [2, 4, 6, 8];
+        const allEven = numbers.every(num => num % 2 === 0);  // allEven: true
+
+   
+   6]. find Method :
+       - Returns the first element in the array that satisfies a given condition.
+    eg :
+        const numbers = [1, 2, 3, 4];
+        const firstEven = numbers.find(num => num % 2 === 0);  // firstEven: 2
+
+
+   7]. findIndex Method :
+       - Returns the index of the first elem in the array that satisfies a given condition.
+    eg :
+        const nums = [1, 2, 3, 4];
+        const FirstEven_indx = nums.findIndex(num => num%2 ===0); //FirstEven_indx: 1
+
+  
+   8]. flatMap Method :
+       - Maps each elem using a function and then flattens the result into a single array.
+    eg :
+        const sentences = ['Hello world', 'JavaScript is awesome'];
+        const words = sentences.flatMap(sentence => sentence.split(' '));
+
+        // words: ['Hello', 'world', 'JavaScript', 'is', 'awesome']
+
+  
+   9]. sort Method :
+       - sorting array elements.
+
+    eg :
+         const numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+         const sortedNumbers = numbers.sort((a, b) => a - b);
+         // sortedNumbers: [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

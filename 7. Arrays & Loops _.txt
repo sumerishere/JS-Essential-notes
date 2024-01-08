@@ -1,0 +1,180 @@
+                       //-------------- Arrays & Loops ----------------//
+
+
+1. What is Array ?
+   - Array is a neat way of storing a list of data items under a single variable name.
+   - Arrays in JavaScript are mutable.
+   
+
+
+------------------------------------------------------------------------------------------
+
+2. Array Syntax & Values.
+   - Common Methods to declearing array:
+     
+     1. array Litrals : let name = ['sumer', 'khan', 'pathan'];
+
+     2. Array constructor : let name = new Array(1,2,3,4,5); //[1,2,3,4,5];
+
+     3. Array.form() : creates a new, shallow-copied array from an array-like or iterable   
+                       object.
+                   eg:
+                       let str = 'hello';
+                       let strArray = Array.form(str);  // newArray['h','e','l','l','o']
+
+
+      4. Using Spread Operator(`...`) : 
+                                        let arr = [1,2,3];
+                                        let newArr = [...arr,4,5]; // newArr[1,2,3,4,5];
+                                           
+                                                      //OR
+
+                     apply method using spread operator :
+
+                                         function_name.apply(thisArg, [argsArray]);
+                                         myfunc.apply(null(this), arr);
+
+                      note--> "this" context is not take as part of function.
+
+                                         function myFunction(x, y, z) {
+                                             let res = x+y+z;
+                                             console.log(res);
+                                         }
+                                         const args = [0, 1, 2];
+                                         myFunction(...args);  //spread operator.
+                                         myFunction.apply(0(null),args);  //apply method.
+      
+       5. Using Array.of() :
+                            let arr = Array.of(1,2,3,4,5);  // arr[1,2,3,4,5];
+
+  
+
+      6. Creating an Empty Array: You can create an empty array and then add elements 
+                                  to it later.
+                              eg:
+                                  let emptyArray = [];
+                                  emptyArray.push('new element'); //putting elem in arr.
+
+ -----------------------------------------------------------------------------------------
+
+3. Array Properties & Methods.
+   - Array Methods:   
+             1. push(ele1,ele2..): add one or more elem to end of an array.
+
+             2. pop() :  Removes the last element from an array.
+
+             3. shift() : Removes the first element from an array.
+
+             4. unshift(ele1,ele2..) : Adds one or more elem to beginning of an array.
+
+             5. splice(idx, cnt, elem1,elem2,..) : both val includes(compulsory).
+                                Changes the contents of an array by removing or replacing 
+                                existing elements and/or adding new elements in place.
+
+             6. toString() : convert to string.
+             7. sort : Sort elemts.
+             8. valueOf() : The valueOf() method of Object instances converts the 
+                       this value to an object. This method is meant to be overridden by  
+                       derived objects for custom type conversion logic. 
+
+    - Arrays also use referece like objs.
+        eg : let arr = [1,3,4,5];
+             arr2 = arr  //u can give direct referc to array.
+
+   - De-structuring also works for Arrays.
+        eg: let arr = [1,2,4,4,5,5];
+            let [a,b,c,d] = arr; // 1 2 4 4 (consider from 0th idx elem of arr).
+
+------------------------------------------------------------------------------------------
+
+4. What is a Loop.
+   - code run multiple times based on condition.
+
+   - types of loops in js :  
+
+      1. While(condition) loop.
+      2. do- while() loop.
+      3. for() - loop.
+      4. for (in) loop.
+         - The for...in statement iterates a specified variable over all 
+            the enumerable properties of an object.	
+
+      5. for (of) loop.
+         - The for...of statement creates a loop Iterating over iterable
+            objects (including Array, Map, Set, arguments object and so on),
+
+
+      6. forEach loop :
+       
+         const arr1 = [1, 2, 3, 4, 5];
+         let sum = 0;
+
+         arr1.forEach( function(i) {
+                  sum += i;
+          } );     
+                   //OR
+         
+         const arr2 = ['a', 'b', 'c'];
+
+         arr2.forEach( (i) => console.log(i) );
+
+
+ 5. Reduce Method of array :
+    - The reduce method is a concise and powerful way to implement the accumulator 
+      pattern. It takes a callback function and an initial value for the accumulator. 
+      The callback function is applied to each element of the array, 
+      updating the accumulator with the result.
+  
+      eg : 
+           //----reduce method -------//
+             //printing sum of all elem of array.
+
+           const num = [1, 2, 3, 4, 5];
+           const sum = num.reduce(function(accumulator, i) {
+                        return accumulator + i;
+           }, 0);
+        
+           
+-----------------------------------------------------------------------------------------               
+
+5. Accumulator Pattern. 
+   - A pattern to accumulate values through looping.
+   - Common Scenarios : 
+      - Sum all the numbers in an array.
+         eg : 
+                let arr = [1,2,3,4,5];
+                let sum = 0 ; //accumulator which store sum result.
+                
+                for(let i = 0 ; i < arr.length ; i++){
+                      sum += arr[i];
+                }
+
+      - Create a modified copy of an array
+         eg : 
+              let arr = [1,2,3,4,5];
+
+              let sqr = [];  // copying sqr of arr elem.
+
+              for(let i =0 ; i<arr.length ; i++){
+                sqr[i] = arr[i]*arr[i];
+              }
+              console.log(sqr)
+
+
+6. Break & Continue.
+   - break lets u stop a loop early, or break out of loop.
+   - Continue is used to skip one iteration or the current iteration.
+   - In while loop remember to do the increament manually before using continue.
+
+
+
+
+
+
+
+
+
+
+
+
+

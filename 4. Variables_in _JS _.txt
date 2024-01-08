@@ -1,0 +1,28 @@
+-----Variables in JS -------
+
+
+1. what is variables.
+   - variables use as container use to store temp data.
+   - define : let, const, var .
+   - Can't use keyword or reserved words.
+   - Can't start with a number. 
+   - NO special char other than $ and _ . 
+
+2. syntax rules.
+   - Done.
+
+3. Updating values.
+   - Done with exercise.
+
+4. Myntra bag exercise.
+   - Done Exercise.
+
+5. Naming conversions.
+   - camelCase format.  --> capitalized letter of new word.
+   - snake_case format --> used underscore( used in C lang ). 
+   - kebab-case --> use hyphens betwn individual names.
+
+6. Ways to create variables.
+   - const keyword --> constant value set.
+   - let.  --> scope within block or function.
+   - var.  --> can be access externally of block or function.

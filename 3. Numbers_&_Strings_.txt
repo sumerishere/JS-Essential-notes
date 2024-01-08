@@ -1,0 +1,28 @@
+---Numbers & Strings---
+
+1.Arithematic Operators.       ---->(+ ,- ,/, *,% ).
+2.Order of Operations.
+3.Types of numbers (int,float).
+4.Don't learn syntax.
+5.Strings.
+6.typeOf Operators.
+
+
+
+---Strings in JS ---
+
+--> string, is sequence of characters to form single string.
+--> it defined by '', " ", and backtics (``) also used for multiline strings.
+
+--backtics (``) :- we can also defind expression inside backtics, first it will   
+                   evaluate exprsn and then it will convert into string form.
+
+
+--concatination of stirngs--
+ -combining string-string value, string-integer value using '+' operator.
+
+---TypeOf Operator ---
+
+ - use to know the data type.
+ - typeof use for common data type number, string and boolean.
+ - 
