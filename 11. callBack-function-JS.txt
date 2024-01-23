@@ -1,0 +1,97 @@
+        // ------------------- callBack function in JS ----------------------//
+
+
+--> In JavaScript, a callback function is a function that is passed as an argument to another
+    function and is executed after the completion of some asynchronous operation or at a    
+    specified time. Callbacks are commonly used in scenarios like handling asynchronous tasks, 
+    event handling, and more.
+
+
+*Basic example of callback :
+       
+             function callback() {
+  	        console.log("this is callback function called after result. ");
+	     }
+
+	     let sum = (a,b,callback) =>{
+ 	       var res = a + b;
+ 	       console.log('result: '+ res);
+
+              //callback invoking
+   	      callback();
+
+	    }
+	    sum(10,30,callback);  
+
+        //---------OR------------- 
+
+	    let sum = (a,b,callback) => {
+  		var res = a + b;
+  		console.log('result: '+ res);
+
+	       //callback invoking
+  	       callback();
+
+	    }
+	    sum(10,30,function() {console.log('wow it works')}); //inline passing callback.
+
+
+-------------------------------------------------------------------------------------------
+
+
+*code example of Sync And Async function with callback function : 
+
+ 	//---- Synchronous example---
+
+	function doSomethingSync(callback) {
+
+	   console.log("Doing something synchronously...");
+ 	   // Simulating a task that takes time
+	   for (let i = 0; i < 3e6; i++) {}
+
+ 	   // Callback is invoked after the synchronous task
+  	   callback();
+        }
+
+	//----Asynchronous example--
+
+	function doSomethingAsync(callback) {
+
+	  console.log("Doing something asynchronously...");
+	  // Simulating an asynchronous task (e.g., reading a file, making an API call)
+  	  
+          setTimeout(() => {
+    	     console.log("Async task is done.");
+    	    
+             // Callback is invoked after the asynchronous task
+             allback();
+  	    }, 2000);
+	}
+
+    // Usage of callback functions
+    doSomethingSync(() => {
+      console.log("Callback after synchronous task.");
+    });
+
+    doSomethingAsync(() => {
+      console.log("Callback after asynchronous task.");
+    });
+
+
+ - doSomethingSync is a function that performs a synchronous task and takes a callback  
+   function as an argument. The callback is executed after the synchronous task is completed.
+
+ - doSomethingAsync is a function that simulates an asynchronous task using setTimeout and 
+   takes a callback function. The callback is executed after the asynchronous task is  
+   finished.
+
+
+Overall : 
+
+    Callbacks are crucial in scenarios where you want to ensure that certain code runs only 
+    after a particular operation is completed. In the asynchronous example, the callback is 
+    used to handle the result of an asynchronous task, which is common in JavaScript,  
+    especially with operations like reading files, making API calls, or handling events.
+
+
+
